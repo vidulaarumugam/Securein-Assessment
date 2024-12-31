@@ -7,7 +7,7 @@ A full-stack application that integrates with the NVD CVE API to retrieve, proce
 ## TECH STACK
 - **Backend Framework**: Express.js (Node.js)
 - **Database**: MongoDB (Mongoose)
-- **Frontend**: EJS, HTML/CSS, JavaScript
+- **Frontend**: EJS, HTML/CSS(bootstrap), JavaScript
 - **API Integration**: NVD CVE API
 - **Utilities**: dotenv, axios, requests, MongoDB's PyMongo
 
