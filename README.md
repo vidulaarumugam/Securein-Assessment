@@ -45,15 +45,23 @@ Include "Results Per Page" options (10, 50, 100) to dynamically update displayed
 
 
 
-## WORKFLOW
+## WORKFLOW/APPROACH
 
-1.The application periodically fetches CVE data from the NVD API using Node.js and stores it in MongoDB.
+The project is a full-stack application that retrieves, processes, and displays CVE data from the NVD API.
 
-2.Express handles requests from the front-end, fetching and filtering the data as per the user's query (e.g., by CVE ID, year, or score).
+1.Data Fetching (Python): A Python script fetches CVE data periodically from the NVD API and stores it in MongoDB, ensuring up-to-date information.
 
-3.EJS dynamically renders the data on the front-end, allowing users to view the CVE records in a table with pagination options.
+2.Backend (Express.js & Node.js): Express.js serves as the backend, handling requests and interacting with MongoDB through Mongoose for data storage. Routes filter and fetch CVE data based on parameters like ID, year, and score.
 
-4.The backend also includes functionality for periodic synchronization of the database, either with a full refresh or incremental updates to keep the stored CVE data up to date.
+3.Frontend (EJS): EJS is used to dynamically render HTML pages, displaying CVE data in a table with pagination and filtering options. Clicking on a record takes users to a detailed view.
+
+4.Database (MongoDB): MongoDB stores the CVE data, with Mongoose providing schema modeling for easier database interaction.
+
+5.Frontend Interaction: The UI is styled with HTML and CSS, while JavaScript handles dynamic elements like pagination.
+
+6.Periodic Data Update: The Python script ensures regular updates to the CVE data, maintaining accuracy.
+
+7.Deployment: The app is configured for local development with instructions for cloning, installing dependencies, and running the app.
 
 ## SETUP INSTRUCTIONS
 
