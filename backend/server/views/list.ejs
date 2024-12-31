@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVE List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr {
+            cursor: pointer;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        img {
+            max-width: 50px;
+            height: auto;
+        }
+        .pagination {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .pagination button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .results-per-page {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CVE List</h1>
+    <div class="controls">
+        <div>Total Records: <%= totalRecords %></div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Identifier</th>
+                <th>Published Date</th>
+                <th>Last Modified Date</th>
+                <th>Status</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% cves.forEach(cve => { %>
+                <tr onclick="navigateToDetail('<%= cve.cve.id %>')">
+                    <td><%= cve.cve.id || 'N/A' %></td>
+                    <td><%= cve.cve.sourceIdentifier || 'N/A' %></td>
+                    <td><%= new Date(cve.cve.published).toLocaleDateString() || 'N/A' %></td>
+                    <td><%= new Date(cve.cve.lastModified).toLocaleDateString() || 'N/A' %></td>
+                    <td><%= cve.cve.vulnStatus || 'N/A' %></td>
+                    <td>
+                        <% if (cve.image) { %>
+                            <img src="<%= cve.image %>" alt="CVE Image">
+                        <% } else { %>
+                            N/A
+                        <% } %>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <div class="pagination">
+        <button onclick="navigatePage(<%= page - 1 %>)" <%= page <= 1 ? 'disabled' : '' %>>Previous</button>
+        <span>Page: <%= page %></span>
+        <button onclick="navigatePage(<%= page + 1 %>)" <%= cves.length < limit ? 'disabled' : '' %>>Next</button>
+    </div>
+    <div class="results-per-page">
+        <label for="results-per-page">Results Per Page:</label>
+        <select id="results-per-page" onchange="updateResultsPerPage()">
+            <option value="10" <%= limit === 10 ? 'selected' : '' %>>10</option>
+            <option value="50" <%= limit === 50 ? 'selected' : '' %>>50</option>
+            <option value="100" <%= limit === 100 ? 'selected' : '' %>>100</option>
+        </select>
+    </div>
+    <script>
+        function navigatePage(page) {
+            if (page < 1) return;
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('page', page);
+            window.location.search = urlParams.toString();
+        }
+
+        function navigateToDetail(cveId) {
+            window.location.href = '/cves/' + cveId;
+        }
+
+        function updateResultsPerPage() {
+            const limit = document.getElementById("results-per-page").value;
+            const urlParams = new URLSearchParams(window.location.search);
+            urlParams.set('limit', limit);
+            urlParams.set('page', 1); // Reset to the first page
+            window.location.search = urlParams.toString();
+        }
+    </script>
+</body>
+</html>
