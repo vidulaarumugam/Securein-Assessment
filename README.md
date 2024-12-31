@@ -61,6 +61,10 @@ cd cve-project
 
 npm install
 
+3.Running app.js
+
+node app.js
+
 ## INPUT SCREENSHOTS
 app.js
 <img width="756" alt="image" src="https://github.com/user-attachments/assets/774dfbd6-24d1-40ba-b4f7-b690cbca9216" />
