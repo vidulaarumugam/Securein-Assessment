@@ -41,24 +41,8 @@ Display CVE data in a table with a "Total Records" count.
 Include "Results Per Page" options (10, 50, 100) to dynamically update displayed records.
 
 ## FILE STRUCTURE
-project/
-│
-├── app                                 # Main application file (entry point)
-     ├── python
-            ├── fetch_cve_data.py       #to fetch data
-     ├── server
-            ├── app.js                  #the express.js file(node.js)
-            ├── views                   #ejs(frontend files)
-                  ├── list.ejs          #first page
-                  ├── details.ejs       #second page
-            ├── node_modules
-            ├── templates
-                  ├── cve_list.html
-            ├── Routes
-                   ├── cveRoutes.js
-            ├── Models
-                   ├── cveModels.js
-├── package.json           # Node.js project metadata and dependencies
+<img width="484" alt="image" src="https://github.com/user-attachments/assets/353ecdfb-f686-429a-8d74-f6b2e73f6469" />
+
 
 
 ## WORKFLOW
