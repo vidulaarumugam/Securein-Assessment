@@ -84,6 +84,9 @@ When a rowis clicked, navigate to the second page:
 ## CONTACT
 For queries or feedback, reach out at:
 Name: Vidula N.A
+
 Contact Number:9986747013
+
 Email: vidulaarumugam6@gmail.com
+
 GitHub: vidulaarumugam
