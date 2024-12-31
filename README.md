@@ -59,8 +59,13 @@ cd cve-project
 
 npm install
 
+## INPUT SCREENSHOTS
+app.js
+<img width="756" alt="image" src="https://github.com/user-attachments/assets/774dfbd6-24d1-40ba-b4f7-b690cbca9216" />
 
-## SCREENSHOTS 
+Seperate frontend files with help of ejs were made the code is attached in repository.
+
+## OUTPUT SCREENSHOTS 
 
 Read the API and display its results in a table with a "Total Records" count.:
 
