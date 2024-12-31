@@ -52,7 +52,7 @@ Include "Results Per Page" options (10, 50, 100) to dynamically update displayed
 
 1.Clone the repository
 
-git clone https://github.com/yourusername/cve-project.git
+git clone https://github.com/yourusername/Securein-Assessment.git
 cd cve-project
 
 2.Install dependencies:
