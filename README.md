@@ -24,14 +24,13 @@ This stack is designed for efficient data retrieval and display, offering functi
 Use pagination (startIndex and resultsPerPage) to access all CVEs.
 Data Processing:
 
-3.Cleanse and deduplicate data.
-Ensure high data quality.
-Batch Synchronization:
+3.Cleanse and deduplicate data:Ensure high data quality.
 
-4.Periodically synchronize the CVE database in batch mode (full refresh or incremental updates).
-Develop APIs:
+4.Batch Synchronization: Periodically synchronize the CVE database in batch mode (full refresh or incremental updates).
 
-5.Fetch CVE details by:
+
+5.Develop APIs:
+Fetch CVE details by
 CVE ID
 Specific year
 CVE Score
