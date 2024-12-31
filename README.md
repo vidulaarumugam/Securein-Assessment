@@ -4,7 +4,7 @@ A full-stack application that integrates with the NVD CVE API to retrieve, proce
 
 
 
-## Tech Stack
+## TECH STACK
 - **Backend Framework**: Express.js (Node.js)
 - **Database**: MongoDB (Mongoose)
 - **Frontend**: EJS, HTML/CSS, JavaScript
@@ -41,14 +41,14 @@ Last modified in N days
 Display CVE data in a table with a "Total Records" count.
 Include "Results Per Page" options (10, 50, 100) to dynamically update displayed records.
 
-WORKFLOW:
+## WORKFLOW
 
 1.The application periodically fetches CVE data from the NVD API using Node.js and stores it in MongoDB.
 2.Express handles requests from the front-end, fetching and filtering the data as per the user's query (e.g., by CVE ID, year, or score).
 3.EJS dynamically renders the data on the front-end, allowing users to view the CVE records in a table with pagination options.
 4.The backend also includes functionality for periodic synchronization of the database, either with a full refresh or incremental updates to keep the stored CVE data up to date.
 
-SETUP INSTRUCTIONS:
+## SETUP INSTRUCTIONS
 
 1.Clone the repository
 
@@ -60,7 +60,7 @@ cd cve-project
 npm install
 
 
-SCREENSHOTS:
+## SCREENSHOTS 
 
 Read the API and display its results in a table with a "Total Records" count.:
 
