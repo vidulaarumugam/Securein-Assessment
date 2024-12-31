@@ -81,7 +81,7 @@ When a rowis clicked, navigate to the second page:
 
 <img width="959" alt="image" src="https://github.com/user-attachments/assets/80bca419-97c9-4735-baf6-dbd8976fc35c" />
 
-##CONTACT
+## CONTACT
 For queries or feedback, reach out at:
 Name: Vidula N.A
 Contact Number:9986747013
