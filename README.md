@@ -1,8 +1,8 @@
-PROJECT OVERVIEW:
+##PROJECT OVERVIEW:
 
 A full-stack application that integrates with the NVD CVE API to retrieve, process, and visualize Common Vulnerabilities and Exposures (CVE) data. The project features a backend for data ingestion and API services, a frontend for interactive UI visualization, and a MongoDB database for secure data storage.
 
-TECH STACK:
+
 
 ## Tech Stack
 - **Backend Framework**: Express.js (Node.js)
@@ -11,11 +11,12 @@ TECH STACK:
 - **API Integration**: NVD CVE API
 - **Utilities**: dotenv, axios, requests, MongoDB's PyMongo
 
-Local development: The application is set up to run on localhost (port 5000 for Express server, MongoDB running locally).
+Local development
+The application is set up to run on localhost (port 5000 for Express server, MongoDB running locally).
 Server-side rendering: The application uses server-side rendering (SSR) with EJS to dynamically display CVE data.
 This stack is designed for efficient data retrieval and display, offering functionalities like pagination and detailed CVE views.
 
-PROBLEM STATEMENT:
+##PROBLEM STATEMENT
 
 1.Fetch CVE Data: Consume CVE information from the NVD CVE API and store it in a database.
 
