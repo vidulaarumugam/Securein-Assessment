@@ -43,8 +43,11 @@ Include "Results Per Page" options (10, 50, 100) to dynamically update displayed
 ## WORKFLOW
 
 1.The application periodically fetches CVE data from the NVD API using Node.js and stores it in MongoDB.
+
 2.Express handles requests from the front-end, fetching and filtering the data as per the user's query (e.g., by CVE ID, year, or score).
+
 3.EJS dynamically renders the data on the front-end, allowing users to view the CVE records in a table with pagination options.
+
 4.The backend also includes functionality for periodic synchronization of the database, either with a full refresh or incremental updates to keep the stored CVE data up to date.
 
 ## SETUP INSTRUCTIONS
